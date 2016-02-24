@@ -63,7 +63,7 @@ class SendMailFormMixin(object):
                                                   fields=rendered_field_values)
             message = self.message_template.format(site=settings.SITE_NAME,
                                                    message=mail_text)
-            subject = self.subject_template.format(settings.SITE_NAME)
+            subject = self.subject_template.format(site_name=settings.SITE_NAME)
 
             send_async_email(subject=subject, message=strip_tags(message),
                              from_email=settings.SENDMAILFORM_FROM_EMAIL,
