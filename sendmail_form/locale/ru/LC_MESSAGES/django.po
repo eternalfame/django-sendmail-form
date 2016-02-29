@@ -35,7 +35,7 @@ msgid ""
 "Somebody left a message on {site}.<br>You can read it in admin panel."
 "<br>{message}"
 msgstr ""
-"Кто-то оставил сообщение на {site}.<br>. Вы можете прочитать его в "
+"Кто-то оставил сообщение на {site}.<br>Вы можете прочитать его в "
 "административной панели.<br>{message}"
 
 #: settings.py:13

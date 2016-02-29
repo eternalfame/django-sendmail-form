@@ -55,7 +55,7 @@ class SendMailFormMixin(object):
             for key, field in self.fields.items():
                     value = self.cleaned_data[key]
                     if isinstance(field, forms.BooleanField):
-                        value = value and "Yes" or "No"
+                        value = value and _("Yes") or _("No")
                     rendered_field_values += self.field_template.format(
                         title=field.label, value=value)
 
