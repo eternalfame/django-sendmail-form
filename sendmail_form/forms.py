@@ -28,13 +28,13 @@ class SendMailFormMixin(object):
 
     def __init__(self, *args, **kwargs):
         super(SendMailFormMixin, self).__init__(*args, **kwargs)
-        if 'subject_template' not in self.__dict__:
+        if 'subject_template' not in type(self).__dict__:
             warnings.warn("You have not set `subject_template` attribute"
                           " of class `{}`. Are you okay with"
                           " the default value?".format(type(self).__name__),
                           DjangoRuntimeWarning)
 
-        if 'message_template' not in self.__dict__:
+        if 'message_template' not in type(self).__dict__:
             warnings.warn("You have not set `message_template` attribute"
                           " of class `{}`. Are you okay with"
                           " the default value?".format(type(self).__name__),
